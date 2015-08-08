@@ -4,13 +4,23 @@ Some items are intentionally not optimized or not coded in the right way
 FastTrackIT 2015,
 version 1.0
 */
+html {
+    background: url("http://i.telegraph.co.uk/multimedia/archive/01917/Cherry3_1917859b.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 body {
     background-color: #5d0807;
+    color: white;
     font-family: Verdana, Helvetica, Arial, sans-serif;
     line-height: 125%;
     padding: 0;
-    margin: 0;
+    margin: 0px;
+
 }
 
 
@@ -22,7 +32,7 @@ h1 {
     padding-top: 2em;
     padding-bottom: .2em;
     padding-left: .4em;
-    margin: 0;
+    margin: 0px;
 }
 
 #tagline p {
@@ -34,7 +44,7 @@ h1 {
     padding-top: .2em;
     padding-bottom: .2em;
     padding-left: .8em;
-    margin: 0;
+    margin: 0px;
 }
 
 #header {
@@ -56,6 +66,7 @@ a {
 #navigation {
     position: absolute;
     top: 110px;
+    left: 10px;
     width: 110px;
     height: 180px;
     background-color: #b29f56;
@@ -63,8 +74,11 @@ a {
     padding-left: .8em;
 ;
 }
+#content {
+ align: center;
+}
 
-#bodycontent {
+#formcontent {
     position: absolute;
     left: 140px;
     top: 120px;
@@ -74,7 +88,7 @@ a {
 
 #postcontent {
     position: absolute;
-    left: 360px;
+    left: 400px;
     top: 110px;
     width: 120px;
     height:180px;
