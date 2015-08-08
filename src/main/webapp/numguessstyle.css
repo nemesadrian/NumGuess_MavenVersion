@@ -6,7 +6,10 @@ version 1.0
 */
 
 body {
-    background-color:floralwhite;
+    background-color: #aa0044;
+    background-image: url("http://i.telegraph.co.uk/multimedia/archive/01917/Cherry3_1917859b.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Verdana, Helvetica, Arial, sans-serif;
     line-height: 125%;
     padding: 0;
