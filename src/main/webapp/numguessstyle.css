@@ -17,6 +17,7 @@ body {
 h1 {
     font-size: large;
     background-color: #9b0000;
+    background-image: url("http://cdn.phillymag.com/wp-content/uploads/2014/06/cherries.jpg");
     color: white;
     padding-top: 2em;
     padding-bottom: .2em;
@@ -27,7 +28,7 @@ h1 {
 #tagline p {
     font-style: italic;
     font-family: Georgia, Times, serif;
-    background-color: #bd1117;
+    background-color: #B29F56;
     border-top: 3px solid #4d0000;
     border-bottom: 3px solid #4d0000;
     padding-top: .2em;
@@ -43,12 +44,13 @@ h1 {
 }
 
 #bgimage {
-    position: absolute;
-    top: 150px;
-    left: 700px;
+    float: inherit;
     background-color: #5d0807;
     color:black;
     padding-left: .8em;
+}
+a {
+    color: #aa0044;
 }
 
 #navigation {
