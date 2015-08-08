@@ -6,10 +6,7 @@ version 1.0
 */
 
 body {
-    background-color: #aa0044;
-    background-image: url("http://i.telegraph.co.uk/multimedia/archive/01917/Cherry3_1917859b.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #5d0807;
     font-family: Verdana, Helvetica, Arial, sans-serif;
     line-height: 125%;
     padding: 0;
@@ -19,7 +16,7 @@ body {
 
 h1 {
     font-size: large;
-    background-color: cornflowerblue;
+    background-color: #9b0000;
     color: white;
     padding-top: 2em;
     padding-bottom: .2em;
@@ -30,9 +27,9 @@ h1 {
 #tagline p {
     font-style: italic;
     font-family: Georgia, Times, serif;
-    background-color: #bed8f3;
-    border-top: 3px solid #7da5d8;
-    border-bottom: 3px solid #7da5d8;
+    background-color: #bd1117;
+    border-top: 3px solid #4d0000;
+    border-bottom: 3px solid #4d0000;
     padding-top: .2em;
     padding-bottom: .2em;
     padding-left: .8em;
@@ -41,8 +38,17 @@ h1 {
 
 #header {
     position: absolute;
-    border-top: 3px solid #7da5d8;
+    border-top: 3px solid #aa0044;
     width: 100%;
+}
+
+#bgimage {
+    position: absolute;
+    top: 150px;
+    left: 700px;
+    background-color: #5d0807;
+    color:black;
+    padding-left: .8em;
 }
 
 #navigation {
@@ -50,7 +56,7 @@ h1 {
     top: 110px;
     width: 110px;
     height: 180px;
-    background-color: navajowhite;
+    background-color: #b29f56;
     color:black;
     padding-left: .8em;
 ;
@@ -70,7 +76,7 @@ h1 {
     top: 110px;
     width: 120px;
     height:180px;
-    background-color: navajowhite;
+    background-color: #b29f56;
     color:black;
     padding-left: .8em;
 ;
