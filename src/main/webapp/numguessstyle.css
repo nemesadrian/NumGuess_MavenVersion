@@ -20,20 +20,29 @@ body {
     line-height: 125%;
     padding: 0;
     margin: 0px;
+    text-align: center;
+}
+
+div {
+    /*+border-radius: 20px;*/
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
 }
 
 #bodypage {
     position: absolute;
     width: 1024px;
-    height: 512px;
-    margin-top: 0px;
+    height: 600px;
+    margin-top: 2%;
     margin-left: 10%;
-    background: url("./cherry.jpg") no-repeat center bottom;
-    background-color: white;
+    background: url("./cherry.jpg") 358px 123px no-repeat;
+    background-color: floralwhite;
 }
 
-h1 {
-    font-size: large;
+#sitebranding h1 {
+    font-size: x-large;
     background-color: #9B0000;
     background-image: url("http://cdn.phillymag.com/wp-content/uploads/2014/06/cherries.jpg");
     color: white;
@@ -62,18 +71,25 @@ h1 {
 }
 
 a {
-    color: #AA0044;
+    color: #820201;
     text-decoration: none;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
+a:visited {
+    font-weight: lighter;
 }
 
 #navigation {
     position: absolute;
-    top: 110px;
+    top: 150px;
     left: 89px;
     width: 120px;
     height: 121px;
-    background-color: #B29F56;
-    color: black;
+    background-color: #820201;
     /*+border-radius: 100px;*/
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
@@ -82,25 +98,26 @@ a {
     padding: 30px;
 }
 
-#content {
-    align: center;
+#navigation a {
+    color: greenyellow;
+    font-size-adjust: 0.7;
 }
 
 #formcontent {
     position: absolute;
-    left: 439px;
-    top: 429px;
+    left: 403px;
+    top: 455px;
     padding-top: 0.4em;
     padding-left: 2em;
 }
 
 #postcontent {
     position: absolute;
-    top: 110px;
+    top: 384px;
     right: 89px;
-    width: 120px;
-    height: 120px;
-    background-color: #B29F56;
+    width: 90px;
+    height: 92px;
+    background-color: #9AB601;
     color: black;
     padding: 30px;
     /*+border-radius: 100px;*/
@@ -111,13 +128,12 @@ a {
 }
 
 #serverResponse {
-    color: red;
     position: absolute;
-    top: 274px;
-    left: 282px;
+    top: 312px;
+    left: 275px;
     width: 200px;
     background-color: floralwhite;
-    color: blue;
+    color: #7f9901;
     padding-left: 0.8em;
 }
 
