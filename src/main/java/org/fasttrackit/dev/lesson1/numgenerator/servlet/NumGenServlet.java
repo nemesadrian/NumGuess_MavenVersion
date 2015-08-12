@@ -67,14 +67,17 @@ public class NumGenServlet extends HttpServlet {
 
             String requestGuessNumber = request.getParameter(REQUEST_PARAM_GUESSNUMBER);
             int iGuessNumber = 0;
-            boolean isANumber = true;
+            boolean isAvalidNumber = true;
             try {
                 iGuessNumber = Integer.parseInt(requestGuessNumber);
+                int max = NumGeneratorBusinessLogic.MAX_NUMBER;
+                int min = NumGeneratorBusinessLogic.MIN_NUMBER;
+                if(iGuessNumber < min || iGuessNumber > max) isAvalidNumber = false;
             } catch (NumberFormatException e) {
-                isANumber = false;
+                isAvalidNumber = false;
             }
 
-            if (isANumber) {
+            if (isAvalidNumber) {
                 boolean success = nbl.determineGuess(iGuessNumber);
                 String hint = nbl.getHint();
                 int nrGuesses = nbl.getNumGuesses();

@@ -5,17 +5,17 @@ FastTrackIT 2015,
 version 1.0
 */
 
-/* html {
+ html {
     background: url("http://i.telegraph.co.uk/multimedia/archive/01917/Cherry3_1917859b.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-} */
+} 
 
 body {
-    background: #5d0807 url("http://i.telegraph.co.uk/multimedia/archive/01917/Cherry3_1917859b.jpg") no-repeat right bottom;
-    /* background-color: #5d0807; */
+   /* background: #5d0807 url("http://i.telegraph.co.uk/multimedia/archive/01917/Cherry3_1917859b.jpg") no-repeat right bottom; */
+    background-color: #5d0807;
     color: white;
     font-family: Verdana, Helvetica, Arial, sans-serif;
     line-height: 125%;
