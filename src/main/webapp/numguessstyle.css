@@ -38,7 +38,7 @@ div {
     margin-top: 2%;
     margin-left: 10%;
     background: url("http://images.all-free-download.com/images/graphiclarge/cherry_310915.jpg") 358px 123px no-repeat;
-    background-color: floralwhite;
+    background-color: white;
 }
 
 #sitebranding h1 {
@@ -99,8 +99,8 @@ a:visited {
 }
 
 #navigation a {
-    color: greenyellow;
-    font-size-adjust: 0.7;
+    color: yellow;
+    font-size-adjust: 0.8;
 }
 
 #formcontent {
@@ -113,12 +113,12 @@ a:visited {
 
 #postcontent {
     position: absolute;
-    top: 384px;
+    top: 160px;
     right: 89px;
-    width: 90px;
-    height: 92px;
+    width: 99px;
+    height: 95px;
     background-color: #9AB601;
-    color: black;
+    font-size-adjust: 0.6;
     padding: 30px;
     /*+border-radius: 100px;*/
     -moz-border-radius: 100px;
@@ -129,10 +129,9 @@ a:visited {
 
 #serverResponse {
     position: absolute;
-    top: 312px;
-    left: 275px;
+    bottom: 120px;
+    left: 130px;
     width: 200px;
-    background-color: floralwhite;
     color: #7f9901;
     padding-left: 0.8em;
 }
