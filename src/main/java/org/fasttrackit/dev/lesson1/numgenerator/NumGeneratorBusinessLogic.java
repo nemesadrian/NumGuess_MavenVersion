@@ -17,16 +17,24 @@ FastTrackIT 2015
 public class NumGeneratorBusinessLogic {
 
     public static final int MAX_NUMBER = 10;
-    public static final int MIN_NUMBER = 0;
+    public static final int MIN_NUMBER = 1;
 
     private boolean isFirstTime = true;
     private boolean successfulGuess;
     private int numberOfGuesses;
     private int generatedNumber;
     private String hint;
+    private long startTime;
+    private long endTime;
+    private double spentTime;
 
     public NumGeneratorBusinessLogic(){
         resetNumberGenerator();
+    }
+
+    public void setTime(boolean isFirstTime) {
+        if(isFirstTime) { startTime=System.currentTimeMillis(); }
+        else {endTime=System.currentTimeMillis();}
     }
 
     public boolean getSuccessfulGuess(){
