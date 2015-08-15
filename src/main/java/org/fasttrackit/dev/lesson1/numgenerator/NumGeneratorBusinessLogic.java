@@ -26,7 +26,6 @@ public class NumGeneratorBusinessLogic {
     private String hint;
     private long startTime;
     private long endTime;
-    private double spentTime;
 
     public NumGeneratorBusinessLogic(){
         resetNumberGenerator();
@@ -35,6 +34,10 @@ public class NumGeneratorBusinessLogic {
     public void setTime(boolean isFirstTime) {
         if(isFirstTime) { startTime=System.currentTimeMillis(); }
         else {endTime=System.currentTimeMillis();}
+    }
+
+    public int getTime() {
+        return (int) (startTime-endTime)/1000;
     }
 
     public boolean getSuccessfulGuess(){
