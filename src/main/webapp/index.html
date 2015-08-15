@@ -18,7 +18,10 @@ FastTrackIT 2015
     <script language="JavaScript">
 
         function reset(){
-            document.getElementById("serverResponse").innerText="";
+            document.getElementById("serverResponse").innerText="How many cherries? ";
+            document.getElementById("postcontent").style.display = 'block';
+            document.getElementById("navigation").style.display = 'block';
+            document.getElementById("showButton").style.display = 'none';
             xmlHttp = new XMLHttpRequest();
             xmlHttp.onreadystatechange=callback;
             var url ="NumGenServlet"+"?requestRestartGame=1";
@@ -71,6 +74,9 @@ FastTrackIT 2015
                  if(keySuccess=="true")
                  {
                      document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + document.getElementById("number").value + " after " + keyNrGuesses + " guesses.";
+                     document.getElementById("postcontent").style.display = 'none';
+                     document.getElementById("navigation").style.display = 'none';
+                     document.getElementById("showButton").style.display = 'block';
                  }
              }
          }
@@ -108,6 +114,7 @@ FastTrackIT 2015
           <input type="button" id="guessButton" value="Guess now" onClick="guess()"/>
           <input type="button" id="resetButton" value="Reset Game" onClick="reset()"/>
       </div>
+      <div id="showButton">Ghiceste</div>
 
   </div>
 

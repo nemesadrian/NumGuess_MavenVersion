@@ -111,6 +111,16 @@ a:visited {
     padding-left: 2em;
 }
 
+#showButton {
+    position: absolute;
+    width: 128px;
+    height: 25px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    display: none;
+}
+
 #postcontent {
     position: absolute;
     top: 160px;

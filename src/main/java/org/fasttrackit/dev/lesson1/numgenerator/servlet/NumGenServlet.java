@@ -70,9 +70,7 @@ public class NumGenServlet extends HttpServlet {
             boolean isAvalidNumber = true;
             try {
                 iGuessNumber = Integer.parseInt(requestGuessNumber);
-                int max = NumGeneratorBusinessLogic.MAX_NUMBER;
-                int min = NumGeneratorBusinessLogic.MIN_NUMBER;
-                if(iGuessNumber < min || iGuessNumber > max) isAvalidNumber = false;
+                if(iGuessNumber < nbl.MIN_NUMBER || iGuessNumber > nbl.MAX_NUMBER) isAvalidNumber = false;
             } catch (NumberFormatException e) {
                 isAvalidNumber = false;
             }
