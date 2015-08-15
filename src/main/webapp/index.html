@@ -68,6 +68,7 @@ FastTrackIT 2015
                 var keySuccess = jSonMessage.keySuccess;
                  var keyHint = jSonMessage.keyHint;
                  var keyNrGuesses = jSonMessage.keyNrGuesses;
+                 var myTime=jSonMessage.keyTime;
 
                  if(keySuccess=="false") {
                      if (keyHint == "higher")
@@ -78,7 +79,7 @@ FastTrackIT 2015
                  else
                  if(keySuccess=="true")
                  {
-                     document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + myNumber + " after " + keyNrGuesses + " guesses.";
+                     document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + myNumber + " after " + keyNrGuesses + " guesses. It took you " + myTime + "s ";
                      document.getElementById("postcontent").style.display = 'none';
                      document.getElementById("navigation").style.display = 'none';
                      document.getElementById("showButton").style.display = 'block';

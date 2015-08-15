@@ -24,20 +24,20 @@ public class NumGeneratorBusinessLogic {
     private int numberOfGuesses;
     private int generatedNumber;
     private String hint;
-    private long startTime;
-    private long endTime;
+    private long startTime=0;
+    private long endTime=1;
 
     public NumGeneratorBusinessLogic(){
         resetNumberGenerator();
     }
 
-    public void setTime(boolean isFirstTime) {
+    public void setTime() {
         if(isFirstTime) { startTime=System.currentTimeMillis(); }
         else {endTime=System.currentTimeMillis();}
     }
 
     public int getTime() {
-        return (int) (startTime-endTime)/1000;
+        return (int) (endTime-startTime)/1000;
     }
 
     public boolean getSuccessfulGuess(){
@@ -65,6 +65,7 @@ public class NumGeneratorBusinessLogic {
     public boolean determineGuess(int guessNumber){
         if (isFirstTime) {
             generatedNumber = NumGenerator.generate(MAX_NUMBER);
+            setTime();
             System.out.println("gennr:"+generatedNumber);
             isFirstTime = false;
         }
@@ -72,6 +73,7 @@ public class NumGeneratorBusinessLogic {
         if (guessNumber == generatedNumber) {
             hint="";
             successfulGuess = true;
+            setTime();
         } else if (guessNumber < generatedNumber) {
             hint = "higher";
             successfulGuess = false;
