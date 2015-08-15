@@ -85,8 +85,8 @@ a:visited {
 
 #navigation {
     position: absolute;
-    top: 150px;
-    left: 89px;
+    top: 158px;
+    right: 31px;
     width: 120px;
     height: 121px;
     background-color: #820201;
@@ -100,15 +100,19 @@ a:visited {
 
 #navigation a {
     color: yellow;
-    font-size-adjust: 0.8;
+    font-size-adjust: 0.7;
 }
 
 #formcontent {
     position: absolute;
-    left: 403px;
-    top: 455px;
-    padding-top: 0.4em;
-    padding-left: 2em;
+    left: 176px;
+    top: 191px;
+    padding-top: 0em;
+    padding-left: 0em;
+    background-color: #FAE817;
+    border-radius: 100px;
+    height: 160px;
+    width: 166px;
 }
 
 #showButton {
@@ -123,8 +127,8 @@ a:visited {
 
 #postcontent {
     position: absolute;
-    top: 160px;
-    right: 89px;
+    bottom: 36px;
+    right: 132px;
     width: 99px;
     height: 95px;
     background-color: #9AB601;
@@ -142,7 +146,7 @@ a:visited {
     bottom: 120px;
     left: 130px;
     width: 200px;
-    color: #7f9901;
+    color: #7F9901;
     padding-left: 0.8em;
 }
 
