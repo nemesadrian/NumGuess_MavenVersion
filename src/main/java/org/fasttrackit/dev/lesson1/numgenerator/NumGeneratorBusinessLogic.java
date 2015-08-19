@@ -25,7 +25,7 @@ public class NumGeneratorBusinessLogic {
     private int generatedNumber;
     private String hint;
     private long startTime=0;
-    private long endTime=1;
+    private long endTime = 1; // hguyfytdtrdygulygukyfytfytfresreaers
 
     public NumGeneratorBusinessLogic(){
         resetNumberGenerator();
