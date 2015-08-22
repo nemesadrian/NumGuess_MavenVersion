@@ -1,7 +1,9 @@
 package org.fasttrackit.dev.lesson1.numgenerator.servlet;
 
 import org.fasttrackit.dev.lesson1.numgenerator.NumGeneratorBusinessLogic;
+import org.fasttrackit.dev.lesson1.numgenerator.SendMail;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -78,8 +80,17 @@ public class NumGenServlet extends HttpServlet {
             if (isAvalidNumber) {
                 boolean success = nbl.determineGuess(iGuessNumber);
                 String hint = nbl.getHint();
+                int numar = nbl.getNumber();
                 int nrGuesses = nbl.getNumGuesses();
                 int time=nbl.getTime();
+                if (success) try {
+                    SendMail.Send("cherryteamfast", "FastTrackIT2", "nemesadrian@gmail.com",
+                            "Congratulation You Won!!!",
+                            "Ai castigat!\n Numarul castigator este: " + numar +
+                                    "\nAi ghicit dupa: " + nrGuesses + "incercari.");
+                } catch (MessagingException e) {
+                    e.printStackTrace();
+                }
                 jsonResponse = "{\"keySuccess\":\"" + success + "\", \"keyHint\":\"" + hint + "\", \"keyNrGuesses\":\"" + nrGuesses + "\", \"keyTime\":\"" + time + "\"}";
 
             } else {

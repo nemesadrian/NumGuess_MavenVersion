@@ -1,5 +1,7 @@
 package org.fasttrackit.dev.lesson1.numgenerator;
 
+import javax.mail.MessagingException;
+
 /**
  * Created by condor on 29/11/14.
  * FastTrackIT, 2015
@@ -36,6 +38,9 @@ public class NumGeneratorBusinessLogic {
         else {endTime=System.currentTimeMillis();}
     }
 
+    public int getNumber() {
+        return generatedNumber;
+    }
     public int getTime() {
         return (int) (endTime-startTime)/1000;
     }
@@ -82,6 +87,7 @@ public class NumGeneratorBusinessLogic {
             successfulGuess = false;
         }
         return successfulGuess;
+
     }
 
 
