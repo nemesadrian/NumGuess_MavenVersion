@@ -96,7 +96,7 @@ public class NumGenServlet extends HttpServlet {
 
             returnJsonResponse(response, jsonResponse);
             if (success) try {
-                SendMail.Send("cherryteamfast", "FastTrackIT2", "cherryteamfast@gmail.com",
+                SendMail.Send("cherryteamfast", "FastTrackIT2", "flaviumesesan@gmail.com",
                         "Congratulation You Won!!!",
                         "Ai castigat!\n Numarul castigator este: " + numar +
                                 "\nAi ghicit dupa " + nrGuesses + " incercari." +
