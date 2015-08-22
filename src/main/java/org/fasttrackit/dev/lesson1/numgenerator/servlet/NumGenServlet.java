@@ -38,7 +38,11 @@ public class NumGenServlet extends HttpServlet {
 
     public void service(HttpServletRequest request, HttpServletResponse response) {
 
-
+        boolean success = false;
+        String hint = "";
+        int numar = -1;
+        int nrGuesses = -1;
+        int time = 0;
         HttpSession session = request.getSession(true);
 
         String requestRestartGame = request.getParameter(REQUEST_PARAM_RESTARTGAME);
@@ -78,19 +82,12 @@ public class NumGenServlet extends HttpServlet {
             }
 
             if (isAvalidNumber) {
-                boolean success = nbl.determineGuess(iGuessNumber);
-                String hint = nbl.getHint();
-                int numar = nbl.getNumber();
-                int nrGuesses = nbl.getNumGuesses();
-                int time=nbl.getTime();
-                if (success) try {
-                    SendMail.Send("cherryteamfast", "FastTrackIT2", "nemesadrian@gmail.com",
-                            "Congratulation You Won!!!",
-                            "Ai castigat!\n Numarul castigator este: " + numar +
-                                    "\nAi ghicit dupa: " + nrGuesses + "incercari.");
-                } catch (MessagingException e) {
-                    e.printStackTrace();
-                }
+                success = nbl.determineGuess(iGuessNumber);
+                hint = nbl.getHint();
+                numar = nbl.getNumber();
+                nrGuesses = nbl.getNumGuesses();
+                time = nbl.getTime();
+
                 jsonResponse = "{\"keySuccess\":\"" + success + "\", \"keyHint\":\"" + hint + "\", \"keyNrGuesses\":\"" + nrGuesses + "\", \"keyTime\":\"" + time + "\"}";
 
             } else {
@@ -98,7 +95,15 @@ public class NumGenServlet extends HttpServlet {
             }
 
             returnJsonResponse(response, jsonResponse);
-
+            if (success) try {
+                SendMail.Send("cherryteamfast", "FastTrackIT2", "cherryteamfast@gmail.com",
+                        "Congratulation You Won!!!",
+                        "Ai castigat!\n Numarul castigator este: " + numar +
+                                "\nAi ghicit dupa " + nrGuesses + " incercari." +
+                                "\nIncearca sa scoti un timp sub " + time);
+            } catch (MessagingException e) {
+                e.printStackTrace();
+            }
         }
     }
 
